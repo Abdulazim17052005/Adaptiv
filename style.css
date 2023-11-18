@@ -1,0 +1,104 @@
+body{
+    background: linear-gradient(to right, #6699ff 0%, #ff99cc 100%);
+    margin: 0 auto;
+}
+.header{
+    border: 2px solid #F7D358;
+    margin-bottom: 100px;
+}
+.header ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+.header ul li{
+    color: black;
+    font-size: 20px;
+}
+.con{
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    background: linear-gradient(to bottom right, #6699ff 0%, #ffccff 100%);
+    margin-bottom: 10px;
+    border-radius: 50px 70px 50px 70px;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+
+    
+}
+#burger,
+[for="burger"]{
+    display: none;
+}
+@media(max-width:1000px){
+    .con{
+        background: linear-gradient(to right, #6699ff 0%, #ffffcc 100%);
+    }
+}
+@media(max-width:850px){
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:550px){
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+    .con{
+        background: linear-gradient(to bottom right, #ffffff 0%, #ff3300 100%);
+        width: 350px;
+        height: 350px;
+        border-radius: 70px 50px 70px 50px;
+    }
+    [for="burger"]{
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+    [for="burger"]::before{
+        content:"☯" ;
+    }
+    #burger:checked[for="burger"]::before{
+     content: '0';   
+    }
+    nav{
+        display: none;
+        position: fixed;
+        top: 0;
+        margin-top: 5%;
+        width: 35%;
+        border: 3px solid;
+        margin-left: 35%;
+        height: 140px;
+        border-radius: 40px 30px 40px 30px;
+        background: linear-gradient(to bottom right, #6666ff 0%, #00ff00 100%);
+
+    }
+    .header ul{
+        flex-wrap: wrap;
+    }
+    .header{
+        margin-bottom: 200px;
+        background-color: #ffffcc;
+    }
+    #burger:checked + label + nav{
+     display: block;   
+    }
+}
+@media (max-width:400px){
+    .con{
+        width: 200px;
+        height: 200px;
+        background-color: aquamarine;
+    }
+}
